@@ -17,10 +17,23 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('users/{id}', function($id){
-    return "usuario e o seu id é $id";
+Route::get('users/inserir', function(){
+    return "Página de Inserir produto";
+});
+
+Route::get('users/{nome}/{valor?}', function($nome, $valor=null){
+    if($valor){
+        return "O nome do produto é $nome, e seu valor é $valor";
+    }else{
+        return "O nome do produto é $nome";
+    }
+});
+
+Route::get('users/{nome}/{valor}', function($nome, $valor){
+    return "O nome do produto é $nome, e seu valor é $valor";
 });
 
 Route::get('users', function(){
     return "usuario";
 });
+
