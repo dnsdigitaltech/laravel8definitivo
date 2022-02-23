@@ -373,29 +373,16 @@
   });
   //Datatable
   $(function () {
-      $('#tableRequests').DataTable({
+      $('#produtos').DataTable({
         'paging'      : true,
         'lengthChange': true,
         'searching'   : true,
         'ordering'    : true,
         'info'        : true,
-        'autoWidth'   : true
-      });
-      $('#tableRequestsTranspFiscal').DataTable({
-        'paging'      : false,
-        'lengthChange': true,
-        'searching'   : true,
-        'ordering'    : true,
-        'info'        : true,
-        'autoWidth'   : true
-      });
-      $('#example2').DataTable({
-        'paging'      : true,
-        'lengthChange': false,
-        'searching'   : false,
-        'ordering'    : true,
-        'info'        : true,
-        'autoWidth'   : false
+        'autoWidth'   : false,
+        "language": {
+            "url": "theme/admin/plugins/datatables/lang/pt-BR.json"
+        }
       });
   });
 

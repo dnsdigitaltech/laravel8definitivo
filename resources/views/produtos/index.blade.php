@@ -12,12 +12,35 @@
         </div>
     </div>
     <section class="content">
-        <h3>Página dos Produtos</h3>
-        @foreach($produtos as $produto)
-        <p>{{$produto->nome}}</p>
-        @endforeach
 
-        {{ $produtos->links() }}
+
+        <div class="card shadown md-4">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover dataTable dtr-inline collapsed" id="produtos" width="100">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Valor</th>
+                                <th>Estoque</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach($produtos as $produto)
+                            <tr>
+                                <td>{{$produto->nome}}</td>
+                                <td>{{$produto->valor}}</td>
+                                <td>{{$produto->estoque}}</td>
+                                <td></td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!--{{ $produtos->links() }}-->
     </section>
 </div>
 @endsection
