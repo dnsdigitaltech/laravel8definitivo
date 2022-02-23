@@ -23,7 +23,7 @@
                             <td>
                                 <a href="{{ route('produtos.descricao', [$produto->id]) }}" title="Detalhes do produto - {{$produto->nome}}"> <i class="fas fa-file-alt text-primary"></i></a>
                                 <a href="{{ route('produtos.edit', $produto) }}" title="Editar produto - {{$produto->nome}}"> <i class="fas fa-edit text-info"></i></a>
-                                <a href="{{ route('produtos.modal', $produto) }}" title="Deletar produto - {{$produto->nome}}"> <i class="fas fa-trash-alt text-danger"></i></a>
+                                <a href="{{ route('produtos.modal', [$produto->id,$produto->nome]) }}" title="Deletar produto - {{$produto->nome}}"> <i class="fas fa-trash-alt text-danger"></i></a>
                             </td>
                         </tr>
                         @endforeach
@@ -34,12 +34,19 @@
     </div>
     {{-- $produtos->links() --}}
 
+    @if (@$id != "")
+    <script type="text/javascript">
+        $().ready(function() {
+            $('#exampleModal').modal();
+        });
+    </script>
+    @endif
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Deletar Registro</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Deletar Registro - {{ @$nomeDelete }}</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -49,7 +56,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                <form method="POST" action="{{ route('produtos.delete', $produto) }}">
+                <form method="POST" action="{{ route('produtos.delete', @$id) }}">
                     @csrf
                     @method('delete')
                     <button type="submit" class="btn btn-danger">Excluir</button>

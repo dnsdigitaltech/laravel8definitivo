@@ -62,11 +62,12 @@ class ProdutosController extends Controller
         return redirect()->route('produtos');
     }
 
-    public function modal($id){
+    public function modal($id, $nome){
         $data['produtos'] = Produto::orderBy('id','desc')->paginate();
         $data['titlePage'] = "Todos os produtos";
         $data['icoPage'] = 'fas fa-th-list';
         $data['id'] = $id;
+        $data['nomeDelete'] = $nome;
         return view('produtos.index', $data);
     }
 }
