@@ -8,8 +8,7 @@ use Illuminate\Http\Request;
 class ProdutosController extends Controller
 {
     public function index(){
-        $data['produtos'] = Produto::orderBy('id','desc')->paginate();
-        //$data['produtos'] = Produto::get();
+        $data['produtos'] = Produto::where('valor', '=', 20)->orderBy('id','desc')->paginate();
         $data['titlePage'] = "Todos os produtos";
         $data['icoPage'] = 'fas fa-th-list';
         return view('produtos.index', $data);

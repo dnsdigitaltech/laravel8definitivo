@@ -1,6 +1,9 @@
 @extends('layouts.admin-lte.app')
 @section('title', 'Produtos')
 @section('content')
+    @if(!isset($id))
+        {{ $id = "" }}
+    @endif
     <a href="{{ route('produtos.inserir') }}" class="btn btn-primary btn-lg"><i class="fas fa-cart-plus"></i> Add Produtos</a>
     <div class="card shadown md-4">
         <div class="card-body">
@@ -56,7 +59,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                <form method="POST" action="{{ route('produtos.delete', @$id) }}">
+                <form method="POST" action="{{ route('produtos.delete', $id) }}">
                     @csrf
                     @method('delete')
                     <button type="submit" class="btn btn-danger">Excluir</button>
