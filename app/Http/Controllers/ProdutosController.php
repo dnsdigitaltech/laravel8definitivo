@@ -58,8 +58,15 @@ class ProdutosController extends Controller
     }
 
     public function delete(Produto $produto){
-        $data['produto'] = $produto;
-        $data['titlePage'] = "Editar o produto: {$data['produto']->nome}";
-        $data['icoPage'] = 'fas fa-edit';
+        $produto->delete();
+        return redirect()->route('produtos');
+    }
+
+    public function modal($id){
+        $data['produtos'] = Produto::orderBy('id','desc')->paginate();
+        $data['titlePage'] = "Todos os produtos";
+        $data['icoPage'] = 'fas fa-th-list';
+        $data['id'] = $id;
+        return view('produtos.index', $data);
     }
 }
