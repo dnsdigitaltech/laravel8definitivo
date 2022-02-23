@@ -7,6 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Página Index</h1>
+    <h1>Página dos Produtos</h1>
+    @foreach($produtos as $produto)
+    <p>{{$produto->nome}}</p>
+    @endforeach
+
+    {{ $produtos->links() }}
 </body>
 </html>
