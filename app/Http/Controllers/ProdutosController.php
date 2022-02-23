@@ -15,7 +15,7 @@ class ProdutosController extends Controller
     }
 
     public function show($nome, $valor = null){
-        return view('produtos.show');
+        return view('produtos.show', ['nome' => $nome, 'valor' => $valor]);
         /*if($valor){
             return "O nome do produto é $nome, e seu valor é $valor";
         }else{
