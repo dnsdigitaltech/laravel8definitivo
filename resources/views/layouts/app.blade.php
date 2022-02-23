@@ -17,14 +17,14 @@
             </a>
             <ul class="nav nav-treeview">
                 <li class="nav-item">
-                    <a href="/produtos" class="nav-link ">
+                    <a href="{{ route('produtos') }}" class="nav-link ">
                         &nbsp;&nbsp;&nbsp;&nbsp;
                         <i class="fas fa-money-check-alt"></i>
                         <p>&nbsp;Todos</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/produtos/inserir" class="nav-link ">
+                    <a href="{{ route('produtos.inserir') }}" class="nav-link ">
                         &nbsp;&nbsp;&nbsp;&nbsp;
                         <i class="fas fa-money-check-alt"></i>
                         <p>&nbsp;Inserir</p>

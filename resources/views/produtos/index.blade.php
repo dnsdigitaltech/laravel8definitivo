@@ -32,7 +32,7 @@
                                 <td>{{$produto->nome}}</td>
                                 <td>{{$produto->valor}}</td>
                                 <td>{{$produto->estoque}}</td>
-                                <td></td>
+                                <td><i class="fas fa-file-alt"></i></td>
                             </tr>
                             @endforeach
                         </tbody>

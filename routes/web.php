@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProdutosController;
+use App\Models\Produto;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,13 +18,8 @@ use App\Http\Controllers\ProdutosController;
 
 Route::get('/', HomeController::class);
 
-Route::get('produtos/inserir', [ProdutosController::class, 'create']);
+Route::get('produtos/inserir', [ProdutosController::class, 'create'])->name('produtos.inserir');
 
-Route::get('produtos/{nome}/{valor?}', [ProdutosController::class, 'show']);
+Route::get('produtos/{nome}/{valor?}', [ProdutosController::class, 'show'])->name('produtos.descricao');
 
-Route::get('produtos/', [ProdutosController::class, 'index']);
-
-Route::get('users', function(){
-    return "usuario";
-});
-
+Route::get('produtos/', [ProdutosController::class, 'index'])->name('produtos');
