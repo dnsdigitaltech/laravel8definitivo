@@ -146,6 +146,9 @@
             font-size: 0.7em !important;
         }
     }
+    .card:not(.card-outline)>.card-header {
+        border-bottom: 1px #e5e5e5 solid;
+    }
   </style>
   <!-- Money -->
   <script src="{{asset('theme/admin/maskmoney/src/jquery.maskMoney.js')}}" type="text/javascript"></script>
@@ -308,7 +311,9 @@
       <!-- Default box -->
       <div class="card">
         <div class="card-header">
-          <h3 class="card-title"><i class="@yield('title')"></i> @yield('title')</h3>
+          <h3 class="card-title">
+              <i class="{{ $icoPage }}"></i> {{ $titlePage }}
+        </h3>
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Deslizar a página">
               <i class="fas fa-minus"></i></button>
@@ -317,7 +322,7 @@
         <div class="card-body">
             @yield('content')
             <div class="preload">
-                <img src="{{asset('theme/admin/dist/img/spinner.gif')}}"
+                <img src="{{asset('theme/admin/dist/img/spinner.gif')}}"/>
                 <i class="fa fa-pulse fa-3x fa-fw"></i>
             </div>
         </div>

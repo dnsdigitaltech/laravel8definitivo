@@ -17,6 +17,9 @@ class ProdutosController extends Controller
     }
 
     public function show($id){
-        return view('produtos.show', ['id' => $id]);
+        $data['produto'] = Produto::find($id);
+        $data['titlePage'] = "O nome do produto é {$data['produto']->nome}";
+        $data['icoPage'] = 'fas fa-file-alt';
+        return view('produtos.show', $data);
     }
 }
