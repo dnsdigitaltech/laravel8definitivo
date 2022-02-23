@@ -1,17 +1,23 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Página dos Produtos</h1>
-    @foreach($produtos as $produto)
-    <p>{{$produto->nome}}</p>
-    @endforeach
+@extends('layouts.admin-lte.site')
+@section('title', 'Produtos')
+@section('content')
+<div class="wrapper">
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                <h1 class="m-0">Página dos Produtos</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="content">
+        <h3>Página dos Produtos</h3>
+        @foreach($produtos as $produto)
+        <p>{{$produto->nome}}</p>
+        @endforeach
 
-    {{ $produtos->links() }}
-</body>
-</html>
+        {{ $produtos->links() }}
+    </section>
+</div>
+@endsection
