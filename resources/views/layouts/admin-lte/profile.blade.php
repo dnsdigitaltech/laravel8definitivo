@@ -11,35 +11,31 @@
           <!-- The user image in the menu -->
           <div class="user-header">
               <p>
-                  <b>Nome:</b> {{ Auth::user()->name }} 
+                  <b>Nome:</b> Eu
               </p>
               <p>
-                  <b>Email:</b> {{ Auth::user()->email }}
+                  <b>Email:</b> mail
               </p>
-          </div> 
+          </div>
         </div>
         <hr class="mb-2">
           <div class="row">
                 <div class="col-6">
-                 <!-- <a href="{{asset("corporativo/perfil/editar/")}}/{{Auth()->user()->slug}}" class="btn btn-block btn-primary">
-                      <i class="fas fa-user-edit"></i>
-                      <span>Editar</span>
-                  </a>-->
 
-                  <!--<a href="#" class="btn btn-block btn-primary">
+                <a href="#" class="btn btn-block btn-primary">
                     <i class="fas fa-user-edit"></i>
                     <span>Editar</span>
-                </a>-->
+                </a>
 
                 </div>
               <!-- /.col -->
               <div class="col-6">
-                <button class="btn btn-block btn-secondary" href="{{ route('sair') }}"
+                <button class="btn btn-block btn-secondary" href=""
                 onclick="event.preventDefault();document.getElementById('logout-form').submit();">
                               Sair <i class="fas fa-sign-out-alt"></i></button>
-                <form id="logout-form" action="{{ route('sair') }}" method="POST">
+                <form id="logout-form" method="POST">
                     @csrf
-                </form>                
+                </form>
               </div>
               <!-- /.col -->
           </div>

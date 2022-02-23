@@ -9,7 +9,7 @@
     <ul class="navbar-nav ml-auto">
         <li class="nav-item" title="Meu Perfil / Sair">
         <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#">
-            <i class="fas fa-user-circle"></i> {{ Auth::user()->name }}
+            <i class="fas fa-user-circle"></i> Eu
         </a>
         </li>
     </ul>

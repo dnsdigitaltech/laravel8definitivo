@@ -2,50 +2,52 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- CSRF Token -->
-  <meta name="csrf-token" content="{{ csrf_token() }}">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>{{ config('app.name') }} | {{ $title }}</title>
-  <!-- Tell the browser to be responsive to screen width -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- jQuery -->
-  <script src="{{ asset('theme/admin/plugins/jquery/jquery.min.js') }}"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="{{ asset('theme/admin/plugins/fontawesome-free/css/all.min.css') }}">
-  <!-- overlayScrollbars -->
-  <link rel="stylesheet" href="{{ asset('theme/admin/plugins/overlayScrollbars/css/OverlayScrollbars.min.css') }}">
-  <!-- Ionicons -->
-  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-   <!-- Tempusdominus Bbootstrap 4 -->
-  <link rel="stylesheet" href="{{ asset('theme/admin/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css') }}">
-  <!-- daterange picker -->
-  <link rel="stylesheet" href="{{ asset('theme/admin/plugins/daterangepicker/daterangepicker.css') }}">
-  <!-- Bootstrap4 Duallistbox -->
-  <link rel="stylesheet" href="{{ asset('theme/admin/plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css') }}">
-  <!-- Select2 -->
-  <link rel="stylesheet" href="{{ asset('theme/admin/plugins/select2/css/select2.min.css') }}">
-  <link rel="stylesheet" href="{{ asset('theme/admin/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
-  <!-- DataTables -->
-  <link rel="stylesheet" href="{{ asset('theme/admin/plugins/datatables-bs4/css/dataTables.bootstrap4.css') }}">
-  <!-- Date picker -->
-  <link id="bsdp-css" href="https://unpkg.com/bootstrap-datepicker@1.9.0/dist/css/bootstrap-datepicker3.min.css" rel="stylesheet">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="{{ asset('theme/admin/dist/css/adminlte.min.css') }}">
-  <!-- Animations -->
-  <link rel="stylesheet" href="{{ asset('theme/admin/dist/css/animate.css') }}">
-  <!-- Google Font: Source Sans Pro -->
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-  <!-- Toastr -->
-  <link rel="stylesheet" href="{{ asset('theme/admin/plugins/toastr/toastr.min.css')}}">
-  <!--Fancybox-->
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
-  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-  <!-- Styles -->
-  <link rel="icon" href="{{ asset('theme/admin/dist/img/favicon.ico')}}" type="image/x-icon"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>@yield('title')</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- jQuery -->
+    <script src="{{ asset('theme/admin/plugins/jquery/jquery.min.js') }}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{{ asset('theme/admin/plugins/fontawesome-free/css/all.min.css') }}">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="{{ asset('theme/admin/plugins/overlayScrollbars/css/OverlayScrollbars.min.css') }}">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Tempusdominus Bbootstrap 4 -->
+    <link rel="stylesheet" href="{{ asset('theme/admin/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css') }}">
+    <!-- daterange picker -->
+    <link rel="stylesheet" href="{{ asset('theme/admin/plugins/daterangepicker/daterangepicker.css') }}">
+    <!-- Bootstrap4 Duallistbox -->
+    <link rel="stylesheet" href="{{ asset('theme/admin/plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css') }}">
+    <!-- Select2 -->
+    <link rel="stylesheet" href="{{ asset('theme/admin/plugins/select2/css/select2.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('theme/admin/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="{{ asset('theme/admin/plugins/datatables-bs4/css/dataTables.bootstrap4.css') }}">
+    <!-- Date picker -->
+    <link id="bsdp-css" href="https://unpkg.com/bootstrap-datepicker@1.9.0/dist/css/bootstrap-datepicker3.min.css" rel="stylesheet">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="{{ asset('theme/admin/dist/css/adminlte.min.css') }}">
+    <!-- Animations -->
+    <link rel="stylesheet" href="{{ asset('theme/admin/dist/css/animate.css') }}">
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <!-- Toastr -->
+    <link rel="stylesheet" href="{{ asset('theme/admin/plugins/toastr/toastr.min.css')}}">
+    <!--Fancybox-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <!-- Styles -->
+    <link rel="icon" href="{{ asset('theme/admin/dist/img/favicon.ico')}}" type="image/x-icon"/>
+    <!-- tailwind -->
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
   <style>
     .content-load {
         display:none;
@@ -114,7 +116,7 @@
             /*padding: 1.25rem;*/
             padding: 0;
         }
-        
+
     }
 
     /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
@@ -306,7 +308,7 @@
       <!-- Default box -->
       <div class="card">
         <div class="card-header">
-          <h3 class="card-title"><i class="{{$fapage}}"></i> {{$titleinfopage}}</h3>
+          <h3 class="card-title"><i class="@yield('title')"></i> @yield('title')</h3>
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Deslizar a página">
               <i class="fas fa-minus"></i></button>
@@ -321,7 +323,7 @@
         </div>
         <!-- /.card-body -->
         <div class="card-footer">
-            Olá <b>{{ auth()->user()->name }}</b> você está logado em {{ date('d/m/Y') }} às {{ date('H:i') }}
+            Olá você está logado em {{ date('d/m/Y') }} às {{ date('H:i') }}
         </div>
         <!-- /.card-footer-->
       </div>

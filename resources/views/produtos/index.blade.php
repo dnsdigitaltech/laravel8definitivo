@@ -1,4 +1,4 @@
-@extends('layouts.admin-lte.site')
+@extends('layouts.admin-lte.app')
 @section('title', 'Produtos')
 @section('content')
 <div class="wrapper">

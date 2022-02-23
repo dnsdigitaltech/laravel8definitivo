@@ -4,7 +4,7 @@
         <i class="fas fa-user"></i>
     </div>-->
     <div class="info">
-        <a href="#" class="d-block">{{ Auth::user()->name }}</a>
+        <a href="#" class="d-block">Eu</a>
         <a href="#"><i class="fas fa-circle text-success"></i> Online</a>
     </div>
 </div>
