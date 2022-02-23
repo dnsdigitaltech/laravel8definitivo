@@ -32,7 +32,9 @@
                                 <td>{{$produto->nome}}</td>
                                 <td>{{$produto->valor}}</td>
                                 <td>{{$produto->estoque}}</td>
-                                <td><i class="fas fa-file-alt"></i></td>
+                                <td>
+                                    <a href="{{ route('produtos.descricao', [$produto->id]) }}"><i class="fas fa-file-alt text-primary"></i></a>
+                                </td>
                             </tr>
                             @endforeach
                         </tbody>
