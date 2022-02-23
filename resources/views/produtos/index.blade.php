@@ -32,5 +32,5 @@
             </div>
         </div>
     </div>
-    <!--{{ $produtos->links() }}-->
+    {{-- $produtos->links() --}}
 @endsection
