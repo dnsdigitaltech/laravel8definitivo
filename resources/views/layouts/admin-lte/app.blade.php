@@ -13,6 +13,8 @@
     <!-- jQuery -->
     <script src="{{ asset('theme/admin/plugins/jquery/jquery.min.js') }}"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- tailwind -->
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{{ asset('theme/admin/plugins/fontawesome-free/css/all.min.css') }}">
     <!-- overlayScrollbars -->
@@ -46,8 +48,6 @@
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <!-- Styles -->
     <link rel="icon" href="{{ asset('theme/admin/dist/img/favicon.ico')}}" type="image/x-icon"/>
-    <!-- tailwind -->
-    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
   <style>
     .content-load {
         display:none;

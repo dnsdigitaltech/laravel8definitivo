@@ -8,11 +8,15 @@ use Illuminate\Http\Request;
 class ProdutosController extends Controller
 {
     public function index(){
-        $produtos = Produto::paginate();
-        return view('produtos.index', ['produtos' => $produtos]);
+        $data['produtos'] = Produto::paginate();
+        $data['titlePage'] = "Todos os produtos";
+        $data['icoPage'] = 'fas fa-th-list';
+        return view('produtos.index', $data);
     }
 
     public function create(){
+        $data['titlePage'] = "O nome do produto é {$data['produto']->nome}";
+        $data['icoPage'] = 'fas fa-file-alt';
         return view('produtos.create');
     }
 
