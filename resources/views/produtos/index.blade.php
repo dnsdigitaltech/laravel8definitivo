@@ -22,7 +22,7 @@
                             <td>{{$produto->estoque}}</td>
                             <td>
                                 <a href="{{ route('produtos.descricao', [$produto->id]) }}" title="Detalhes do produto - {{$produto->nome}}"> <i class="fas fa-file-alt text-primary"></i></a>
-                                <a href="{{ route('produtos.descricao', [$produto->id]) }}" title="Editar produto - {{$produto->nome}}"> <i class="fas fa-edit text-info"></i></a>
+                                <a href="{{ route('produtos.edit', [$produto]) }}" title="Editar produto - {{$produto->nome}}"> <i class="fas fa-edit text-info"></i></a>
                                 <a href="{{ route('produtos.descricao', [$produto->id]) }}" title="Deletar produto - {{$produto->nome}}"> <i class="fas fa-trash-alt text-danger"></i></a>
                             </td>
                         </tr>

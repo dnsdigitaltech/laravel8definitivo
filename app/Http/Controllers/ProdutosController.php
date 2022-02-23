@@ -38,4 +38,11 @@ class ProdutosController extends Controller
         $data['icoPage'] = 'fas fa-file-alt';
         return view('produtos.show', $data);
     }
+
+    public function edit(Produto $produto){
+        $data['produto'] = $produto;
+        $data['titlePage'] = "Editar o produto: {$data['produto']->nome}";
+        $data['icoPage'] = 'fas fa-edit';
+        return view('produtos.edit', $data);
+    }
 }
