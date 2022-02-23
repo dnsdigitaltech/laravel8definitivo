@@ -19,15 +19,15 @@
                 <li class="nav-item">
                     <a href="{{ route('produtos') }}" class="nav-link ">
                         &nbsp;&nbsp;&nbsp;&nbsp;
-                        <i class="fas fa-money-check-alt"></i>
-                        <p>&nbsp;Todos</p>
+                        <i class="fas fa-th-list"></i>
+                        <p>&nbsp; Todos</p>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="{{ route('produtos.inserir') }}" class="nav-link ">
                         &nbsp;&nbsp;&nbsp;&nbsp;
-                        <i class="fas fa-money-check-alt"></i>
-                        <p>&nbsp;Inserir</p>
+                        <i class="fas fa-cart-plus"></i>
+                        <p>&nbsp; Adicionar</p>
                     </a>
                 </li>
             </ul>

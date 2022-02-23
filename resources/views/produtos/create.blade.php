@@ -1,5 +1,27 @@
 @extends('layouts.admin-lte.app')
-@section('title', 'Página produto')
+@section('title', 'Adicionar Produto')
 @section('content')
-<h1>Página de criar produto</h1>
+
+    <form method="POST" action="{{-- route('produtos.insert') --}}">
+        <div class="form-group">
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" class="form-control" id="nome" placeholder="Nome">
+        </div>
+        <div class="form-group">
+            <label for="estoque">Estoque</label>
+            <input type="text" name="estoque" class="form-control" id="estoque" placeholder="Estoque">
+        </div>
+        <div class="form-group">
+            <label for="valor">Valor</label>
+            <input type="text" name="valor" class="form-control" id="valor" placeholder="Valor">
+        </div>
+        <div class="form-group">
+            <label for="descricao">Descrição</label>
+            <textarea name="descricao" class="form-control" id="descricao" rows="3" placeholder="Descrição"></textarea>
+        </div>
+
+
+        <button type="submit" class="btn btn-primary"><i class="fas fa-cart-plus"></i> Adicionar</button>
+    </form>
+
 @endsection

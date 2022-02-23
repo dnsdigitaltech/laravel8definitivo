@@ -320,10 +320,14 @@
           </div>
         </div>
         <div class="card-body">
-            @yield('content')
-            <div class="preload">
-                <img src="{{asset('theme/admin/dist/img/spinner.gif')}}"/>
-                <i class="fa fa-pulse fa-3x fa-fw"></i>
+            <div class="wrapper">
+                <section class="content">
+                    @yield('content')
+                    <div class="preload">
+                        <img src="{{asset('theme/admin/dist/img/spinner.gif')}}" width="50"/>
+                        <i class="fa fa-pulse fa-3x fa-fw"></i>
+                    </div>
+                </section>
             </div>
         </div>
         <!-- /.card-body -->

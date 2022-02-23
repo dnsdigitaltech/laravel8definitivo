@@ -7,8 +7,7 @@
     <p>{{ $produto->descricao }}</p>
     <hr>
     <p>{{ $produto->descricao_longa }}</p>
-    <a href="{{ route('produtos') }}" class="btn btn-primary btn-lg">Ver Produtos</a>
-
+    <a href="{{ route('produtos') }}" class="btn btn-primary btn-lg"><i class="fas fa-th-list"></i> Ver Produtos</a>
 </div>
 
 @endsection

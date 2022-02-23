@@ -15,9 +15,9 @@ class ProdutosController extends Controller
     }
 
     public function create(){
-        $data['titlePage'] = "O nome do produto é {$data['produto']->nome}";
+        $data['titlePage'] = "Inserir produto";
         $data['icoPage'] = 'fas fa-file-alt';
-        return view('produtos.create');
+        return view('produtos.create', $data);
     }
 
     public function show($id){
