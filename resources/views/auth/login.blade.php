@@ -4,9 +4,9 @@
 <div class="card">
     <div class="card-body login-card-body">
         <p class="login-box-msg">ACESSAR O SISTEMA</p>
-        <form method="POST" action="{{ route('login') }}">
+        <form method="POST" action="{{ route('usuarios.login') }}">
             @csrf
-            
+
             <div class="input-group mb-3">
                     <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
                     <div class="input-group-append">
