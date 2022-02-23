@@ -20,6 +20,10 @@ class ProdutosController extends Controller
         return view('produtos.create', $data);
     }
 
+    public function insert(){
+
+    }
+
     public function show($id){
         $data['produto'] = Produto::find($id);
         $data['titlePage'] = "O nome do produto é {$data['produto']->nome}";
