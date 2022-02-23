@@ -56,4 +56,10 @@ class ProdutosController extends Controller
         $produto->save();
         return redirect()->route('produtos');
     }
+
+    public function delete(Produto $produto){
+        $data['produto'] = $produto;
+        $data['titlePage'] = "Editar o produto: {$data['produto']->nome}";
+        $data['icoPage'] = 'fas fa-edit';
+    }
 }
