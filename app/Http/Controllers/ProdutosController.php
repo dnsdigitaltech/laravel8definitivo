@@ -34,6 +34,7 @@ class ProdutosController extends Controller
 
     public function show($id){
         $data['produto'] = Produto::find($id);
+        $data['title'] =
         $data['titlePage'] = "O nome do produto é {$data['produto']->nome}";
         $data['icoPage'] = 'fas fa-file-alt';
         return view('produtos.show', $data);
@@ -44,5 +45,15 @@ class ProdutosController extends Controller
         $data['titlePage'] = "Editar o produto: {$data['produto']->nome}";
         $data['icoPage'] = 'fas fa-edit';
         return view('produtos.edit', $data);
+    }
+
+    public function editar(Request $request, Produto $produto){
+        $produto->nome = $request->nome;
+        $produto->valor = $request->valor;
+        $produto->estoque = $request->estoque;
+        $produto->descricao = $request->descricao;
+        $produto->descricao_longa = $request->descricao;
+        $produto->save();
+        return redirect()->route('produtos');
     }
 }
