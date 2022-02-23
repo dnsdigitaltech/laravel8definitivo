@@ -20,7 +20,14 @@ class ProdutosController extends Controller
         return view('produtos.create', $data);
     }
 
-    public function insert(){
+    public function insert(Request $request){
+        $produto = new Produto();
+        $produto->nome = $request->nome;
+        $produto->valor = $request->valor;
+        $produto->estoque = $request->estoque;
+        $produto->descricao = $request->descricao;
+        $produto->descricao_longa = $request->descricao;
+        $produto->save();
 
     }
 
